@@ -1,0 +1,1412 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- HEADER --- */
+header {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem 5%;
+}
+.logo { font-size: 1.2rem; font-weight: bold; }
+.contact-btn {
+    border: 1px solid #4f46e5;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+color: #ffffffb3;
+white-space: nowrap;
+font-weight: bold;
+}
+nav {
+    display: flex;
+    align-items: center;
+    /* On pousse tout à droite pour que le bouton contact soit le point de repère */
+    margin-left: auto; 
+}
+
+header nav, 
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* L'espace sera identique partout ici */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    /* L'écart entre Home, Projets et Mon CV */
+    gap: 40px; 
+    /* L'écart entre Mon CV et le bouton Me contacter */
+    margin-right: 40px;
+    gap: 25px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+    color: #4f46e5;
+}
+.contact-btn:hover { background: #4f46e5; color: white; }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tagline-3d {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+    background: #161616;
+    border: 1px solid #333;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: fit-content;
+    border-radius: 4px;
+}
+.hero h1 {
+    font-size: clamp(4rem, 12vw, 8.5rem); /* Taille boostée */
+    line-height: 0.85; /* Plus serré pour le style premium */
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -3px; /* Effet compact bogoss */
+}
+.highlight { color: #4f46e5; }
+.highlight2 { color: #618581;}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #999;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* --- PORTFOLIO GRID (LES CARDS DU DÉBUT) --- */
+.work-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    border-left: 4px solid #4f46e5;
+    padding-left: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* --- BLOC CARD COMPLET ET NETTOYÉ --- */
+.card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    
+    /* On enlève TOUTE hauteur fixe ici */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Important pour que toutes les cartes d'une ligne fassent la même taille */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #4f46e5;
+}
+
+/* Zone Image : On fixe la hauteur ici et on ne la laisse plus bouger */
+.card-visual {
+    height: 200px !important; /* Le !important force le navigateur à t'écouter */
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+.card-visual span { 
+    font-size: 2.8rem; /* Garde la taille imposante */
+    font-weight: 900; 
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* --- RÉGLAGES COMPACTS --- */
+    line-height: 0.75;      /* Réduit l'espace vertical entre les mots */
+    letter-spacing: -3px;   /* Tasse les lettres horizontalement */
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* ------------------------ */
+    
+    transition: 0.4s ease;
+}
+
+/* Zone Texte : On la laisse respirer */
+.card-info {
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important; /* Remplit le reste de la carte */
+    height: auto !important; /* Annule le height: 160px qui bloquait tout */
+    background: #111;
+}
+
+.card-title { 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 0.5rem; 
+}
+
+.card-desc { 
+    font-size: 0.85rem; 
+    color: #666; 
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.card-tags { 
+    font-size: 0.75rem; 
+    color: #4f46e5; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    margin-top: auto; /* Aligne les tags en bas, peu importe la longueur du texte */
+}
+/* Petit effet bonus : l'image zoom un peu quand tu passes la souris */
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+/* Couleurs pour tes projets */
+.villas-bg { background-color: #3e524f; }
+.moea-bg { background-color: #2a2a2a; }
+.move-bg { background-color: #0a1128; }
+
+.card-info {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title { font-size: 1.2rem; font-weight: bold; }
+.card-tags { font-size: 0.75rem; color: #4f46e5; text-transform: uppercase; font-weight: bold; }
+
+footer {
+    padding: 80px 5% 40px 5%; /* Plus d'espace en haut pour bien séparer des projets */
+    text-align: center;
+    border-top: 1px solid #1a1a1a; /* Un trait très sombre et discret */
+    margin-top: 50px;
+}
+
+footer p {
+    color: #444; /* Gris foncé pour ne pas voler la vedette au reste */
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/* --- PAGES PROJETS --- */
+.project-hero {
+    position: relative;
+    /* On garde tes dimensions d'origine */
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    background-color: transparent; /* On enlève le fond vert */
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* --- 1. LE STYLE COMMUN (Flou et Noirceur) --- */
+.project-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Effets fixes pour toutes les pages */
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.65); /* L'assombrissement que tu voulais */
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    
+    z-index: 1;
+}
+
+.villas-hero::before {
+    background-image: url('Images/villas-concept.jpg');
+}
+
+/* Page Moea */
+.moea-hero::before {
+    background-image: url('Images/planetshoe.jpg');
+}
+
+/* Page Move'N See (si besoin) */
+.movensee-hero::before {
+    background-image: url('Images/movenseebatiment.png');
+}
+
+.guypiret-hero::before {
+    background-image: url('Images/guypiretjardin.jpg');
+}
+
+/* On s'assure que le titre et les tags sont au premier plan */
+.project-hero h1, 
+.project-meta {
+    position: relative;
+    z-index: 2;
+}
+
+.project-hero h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.project-meta {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 5%;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.content-grid.reverse { direction: rtl; } /* Inverse l'ordre image/texte */
+.content-grid.reverse .text-block { direction: ltr; }
+
+.text-block h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.text-block p, .text-block li {
+    color: #999;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.image-block img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #222;
+    max-width: 400px; /* Image assez petite sur mobile pour rester élégante */
+    margin-top: px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.carousel-wrapper img {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    width: 100%;
+    object-fit: contain;
+    border: 1px solid #222;
+}
+
+/* --- Flèches --- */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+/* --- Points de navigation --- */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.carousel-nav a {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+    transition: 0.3s;
+}
+
+.carousel-nav a:hover {
+    background: #4f46e5;
+}
+
+/* Conteneur de chaque slide */
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    position: relative; /* Indispensable pour placer le badge */
+}
+
+/* Style des étiquettes Avant / Après */
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+    pointer-events: none; /* Pour que le clic passe à travers vers l'image */
+}
+
+/* On ajuste l'image pour qu'elle remplisse bien son nouveau conteneur */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.logo-display {
+    background: #1a1a1a;
+    padding: 40px; /* Réduit un peu pour laisser de la place aux flèches */
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.project-meta {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Fond sombre pour détacher du vert */
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 8px 20px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px); /* Effet de flou moderne */
+}
+p {
+    text-align: justify;
+    text-justify: inter-word; /* Améliore l'espacement entre les mots pour la justification */
+}
+.project-conclusion {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #222; /* Un petit trait discret pour séparer de la liste */
+    font-size: 0.95rem;
+    color: #888; /* Un gris un peu plus clair que le reste */
+    font-style: italic; /* Pour bien différencier l'explication de la liste */
+    line-height: 1.4;
+}
+
+/* Container pour le PDF */
+.pdf-container {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Style spécifique pour le Bilan en bas de page */
+.project-bilan {
+    text-align: center;
+    max-width: 800px;
+    margin: 80px auto 0 auto;
+    padding-top: 50px;
+    border-top: 1px solid #222;
+}
+
+.project-bilan h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.project-bilan p {
+    color: #888;
+    line-height: 1.8;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5; 
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#mes-projets {
+    scroll-margin-top: 100px; 
+}
+
+/* --- SPECIFIQUE MOEA --- */
+
+/* Fond pour le header de la page MOEA */
+.moea-bg-header {
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), 
+                url('background_moea.jpg'); /* Ton image de fond si tu en as une */
+    background-size: cover;
+    background-position: center;
+    background-color: #2a2a2a; /* Fallback couleur */
+}
+
+/* Style capsule pour les tags projet */
+.project-meta-capsule {
+    margin-top: 20px;
+    background: rgba(79, 70, 229, 0.9); /* Ton violet fétiche */
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Box pour mettre en valeur le logo sur fond sombre */
+.logo-display-box {
+    background: #161616;
+    padding: 60px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-display-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* PDF plus large à gauche, texte à droite */
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+/* Sur mobile, on empile les éléments pour que ça reste lisible */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- CORRECTION SPECIFIQUE PAGE CV --- */
+
+/* On cible la classe ajoutée dans le HTML pour descendre le contenu sous la navbar */
+.cv-page-section {
+    padding-top: 140px !important; /* Force l'espace sous le header */
+}
+
+.cv-container {
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.cv-sidebar {
+    border-right: 1px solid #222;
+    padding-right: 40px;
+}
+
+.cv-section {
+    margin-bottom: 40px;
+}
+
+.cv-section h3 {
+    color: #4f46e5;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.cv-section p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    color: #888;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.cv-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.cv-title span {
+    color: #4f46e5;
+}
+
+.cv-intro {
+    font-size: 1.2rem;
+    color: #999;
+    max-width: 700px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.cv-block {
+    margin-bottom: 60px;
+}
+
+.cv-block h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.cv-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    margin-bottom: 35px;
+}
+
+.cv-date {
+    font-family: monospace;
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cv-desc h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.cv-desc p {
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Fix mobile pour le CV */
+/* --- CORRECTIF MOBILE FINAL --- */
+@media (max-width: 768px) {
+    
+    /* 1. NAVBAR : On empile pour éviter les chevauchements */
+    header {
+        flex-direction: column; /* Le menu passe sous le nom */
+        padding: 1rem 0;
+        height: auto;
+        position: relative; /* On le détache du haut pour libérer de la place */
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-left: 0; 
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        margin-right: 0;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+    }
+
+    .contact-btn {
+        display: none; /* On cache le bouton contact sur mobile pour gagner de la place */
+    }
+
+    /* 2. PRÉSENTATION (HERO) : On réduit drastiquement les tailles */
+    .hero {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: 3rem !important; /* Ton nom ne dépassera plus de l'écran */
+        line-height: 1;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+    }
+
+    .tagline-3d {
+        font-size: 0.6rem;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: left; /* Plus lisible que justify sur petit écran */
+    }
+
+    /* 3. PAGES PROJETS : Titres et Bannières */
+    .project-hero {
+        height: 40vh; /* Moins haut sur mobile */
+    }
+
+    .project-hero h1 {
+        font-size: 2.2rem !important;
+        padding: 0 5%;
+    }
+
+    .project-meta {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    /* 4. PDF : On remplace par un bouton plus simple */
+    .pdf-container {
+        height: 300px;
+    }
+}
+/* --- STYLE DES CARTES PROJETS (VILLAS MAJOLIE) --- */
+/* --- CARTES PROJETS (FIX DU FLOU SUR LES BORDURES) --- */
+
+/* --- STYLE COMMUN AUX CARTES (VILLAS & MOEA) --- */
+
+/* --- SYSTEME DE CARTES UNIFIÉ --- */
+
+/* --- SECTION PROJETS : CARTES VILLAS & MOEA --- */
+
+.card-visual {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    border-radius: 12px 12px 0 0;
+    transition: all 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+/* L'OVERLAY : Flou et sombre au repos */
+.card-visual::before {
+    content: '';
+    position: absolute;
+    /* Débordement de -10px pour éviter les bords non-flous */
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: rgba(0, 0, 0, 0.45); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+/* LE TEXTE : Taille identique (2.5rem) pour tous les projets */
+.card-visual span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff; 
+    -webkit-text-stroke: 0px transparent; 
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+/* --- EFFETS AU SURVOL (HOVER) --- */
+
+/* 1. L'image devient nette */
+.card:hover .card-visual::before {
+    backdrop-filter: blur(0px); 
+    -webkit-backdrop-filter: blur(0px);
+    background: rgba(0, 0, 0, 0.15); 
+}
+
+/* 2. Le texte devient transparent avec un contour blanc */
+.card:hover .card-visual span {
+    color: rgba(255, 255, 255, 0); 
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 1); 
+    transform: scale(1.05);
+    text-shadow: none;
+}
+
+/* --- ATTRIBUTION DES IMAGES --- */
+
+.villas-card .card-visual {
+    background-image: url('Images/villas-concept.jpg');
+}
+
+.moea-card .card-visual {
+    background-image: url('Images/planetshoe.jpg');
+}
+
+.movensee-card .card-visual {
+    background-image: url('Images/movenseebatiment.png');
+}
+
+.burlesque-card .card-visual {
+    background-image: url('Images/burlesquefestival.jpg');
+}
+
+.guypiret-card .card-visual {
+    background-image: url('Images/guypiretjardin.jpg');
+}
+
+/* --- AJUSTEMENTS POUR MOBILE (Écrans inférieurs à 768px) --- */
+@media (max-width: 768px) {
+    
+    /* NAVBAR : On réduit les écarts et la taille */
+    header {
+        padding: 1rem 5%;
+    }
+    nav ul {
+        gap: 15px; /* Réduit l'espace entre Home, Projets, CV */
+        margin-right: 15px;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    .contact-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    /* HERO : On réduit la taille du gros titre */
+    .hero h1 {
+        font-size: 3.5rem !important; /* Taille beaucoup plus petite pour mobile */
+        letter-spacing: -1px;
+    }
+
+    /* BANNIÈRE PROJET : On réduit aussi ici */
+    .project-hero h1 {
+        font-size: 2.8rem !important;
+        line-height: 1;
+    }
+    .project-meta {
+        font-size: 0.7rem;
+        padding: 6px 15px;
+    }
+
+    /* PDF : On lui donne une hauteur fixe pour mobile */
+    .pdf-container {
+        height: 500px; /* Force une hauteur pour que le scroll interne marche */
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* Rend le scroll fluide sur iPhone */
+    }
+    .pdf-container iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* --- SECTION BOUTON TÉLÉCHARGEMENT --- */
+.download-container {
+    text-align: center;
+    margin: 0px 0 80px 0; /* Réduit l'espace du haut à 10px au lieu de 40px */
+    padding: 0 20px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background-color: rgba(255, 255, 255, 0.03); /* Presque transparent au repos */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px; /* Coins légèrement arrondis style "App" */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation fluide */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- EFFET HOVER VIOLET --- */
+.download-btn:hover {
+    background-color: #6d28d9; /* Violet intense */
+    border-color: #8b5cf6; /* Bordure violette plus claire */
+    color: #ffffff;
+    transform: translateY(-5px); /* Le bouton monte légèrement */
+    box-shadow: 0 15px 30px rgba(109, 40, 217, 0.4); /* Ombre portée violette */
+}
+
+.download-btn .icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover .icon {
+    transform: scale(1.2); /* L'icône grossit un peu au survol */
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .download-container {
+        margin-top: 5px; /* Encore plus proche sur mobile */
+    }
+    .download-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+.skills-used {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-used span {
+    background: rgba(109, 40, 217, 0.1); /* Rappel de ton violet */
+    border: 1px solid rgba(109, 40, 217, 0.3);
+    color: #a78bfa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Inversion texte/image pour la ligne 2 */
+.detail-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Pour alterner le sens Image/Texte et éviter la monotonie */
+.detail-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* On s'assure que les titres Mission 01 ressortent bien */
+.detail-text h2 {
+    font-size: 0.8rem;
+    color: #6d28d9; /* Ton violet pour rappeler le bouton */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+/* On remet les proportions à 50/50 pour que ce soit grand */
+.detail-image {
+    flex: 0 0 50%; 
+    max-width: 100%; /* On enlève la limite des 400px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Si tu veux qu'elle soit "pleine balle" sans cadre blanc autour, 
+       tu peux mettre le padding à 0 */
+    padding: 0px; 
+    background: transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Un peu d'ombre pour le relief */
+}
+
+/* On rééquilibre le texte à 50% aussi */
+.detail-text {
+    flex: 0 0 50%;
+    padding: 0 40px; /* Ajoute un peu d'air entre le texte et la vidéo */
+}
+
+/* On garde le responsive pour le mobile */
+@media (max-width: 768px) {
+    .detail-image, .detail-text {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+}
+
+/* On cible spécifiquement la mission 2 pour ne pas casser le reste */
+.mission-2 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mission-2 .text-block {
+    flex: 1; /* Prend environ 30-40% */
+}
+
+.mission-2 .video-block {
+    flex: 2; /* Prend environ 60-70% de l'espace (plus gros) */
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Optionnel : donne du relief */
+}
+
+/* Mobile : on repasse l'un sur l'autre */
+@media (max-width: 900px) {
+    .mission-2 {
+        flex-direction: column-reverse; /* Vidéo en premier sur mobile */
+    }
+}
+
+.mission-2 {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+}
+
+/* On donne 60% de place au texte et 40% à la vidéo */
+.mission-2 .text-block {
+    flex: .7; 
+}
+
+.mission-2 .video-block {
+    flex: 1; 
+}
+
+/* Nettoyage des cartes projets */
+div.project-card {
+    height: auto !important;
+    min-height: 480px !important;
+    display: flex !important;
+}
+
+div.project-tags {
+    margin-top: auto !important;
+}
+
+/* Forcer le responsive */
+@media screen and (max-width: 900px) {
+    div.content-grid, div.mission-2 {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    div.text-block {
+        order: -1 !important; /* -1 force le passage TOUT en haut */
+        margin-bottom: 20px !important;
+    }
+
+    div.text-block h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+    }
+
+    div.image-block, div.video-block, div.logo-display {
+        order: 2 !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* ... tes autres règles existantes (order, flex-direction, etc.) ... */
+    .hero h1 {
+        font-size: 12vw !important; /* Réduit la taille proportionnellement à l'écran */
+        line-height: 1.1 !important;
+        letter-spacing: -1px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .hero p {
+        text-align: justify !important; /* Le !important force le passage sur mobile */
+        text-justify: inter-word;      /* Améliore la répartition des espaces */
+        hyphens: auto;                 /* Coupe les mots longs pour éviter les trous */
+        font-size: 0.95rem;            /* Optionnel : réduit légèrement la taille pour mobile */
+        line-height: 1.5;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Conteneur des boutons */
+.lang-switcher {
+    display: flex;
+    gap: 10px;      /* Espace entre les deux drapeaux */
+    margin: 0 25px; /* Espace identique au gap de la nav pour l'équilibre */
+}
+
+.lang-btn {
+    width: 36px;    /* Taille fixe pour l'uniformité */
+    height: 28px;   /* Taille fixe pour l'uniformité */
+    background: #111; /* Fond sombre pour le contour */
+    border: 2px solid #333;
+    border-radius: 4px; /* Un peu moins rond, plus "UI moderne" */
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+.lang-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Important : empêche la déformation */
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    border-color: #5d5dff;
+}
+
+/* Classe pour le drapeau sélectionné */
+.lang-btn.active {
+    border-color: #5d5dff;
+    box-shadow: 0 0 8px rgba(93, 93, 255, 0.4);
+}
+
+/* Ajustement spécifique pour les écrans mobiles */
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-top: 10px; /* Ajuste cette valeur selon tes besoins */
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Si tu veux aussi réduire un peu la taille des drapeaux sur mobile */
+    .lang-btn img {
+        width: 30px; 
+        height: auto;
+    }
+}
+
+/* --- Media Query Mobile (768px et moins) --- */
+.cv-page {
+    padding: 120px 5% 50px;
+    text-align: center;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+}
+
+.cv-item {
+    flex: 1;
+    max-width: 450px;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cv-preview {
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cv-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cv-preview:hover img {
+    transform: scale(1.02);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #6200ea; /* Couleur d'accentuation */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #7c4dff;
+    transform: translateY(-3px);
+}
+
+/* Media Query pour Mobile */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cv-item {
+        width: 100%;
+    }
+}
+
+/* --- PAGE CV UNIQUEMENT --- */
+
+/* Centrage forcé du titre */
+/* --- ISOLATION DE LA PAGE CV --- */
+
+/* On s'assure que le container principal est bien centré et sous le header */
+/* --- CORRECTION PAGE CV --- */
+
+/* --- RESET ET FIX POUR LA PAGE CV --- */
+/* --- FIX FINAL PAGE CV AVEC TES COULEURS --- */
+.cv-page-body {
+    background-color: #000 !important; /* Fond noir pur comme sur tes screens */
+    margin: 0;
+    padding: 0;
+}
+
+/* On dégage l'espace pour le titre sous la navbar */
+.cv-page-body .cv-section-container {
+    padding-top: 120px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cv-page-body .cv-main-title {
+    font-size: 2.5rem !important; 
+    color: white;
+    margin: 40px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* La grille qui contient les deux CV */
+.cv-page-body .cv-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1100px;
+    flex-wrap: wrap; 
+}
+
+/* Design des cartes avec ton gris foncé discret */
+.cv-page-body .cv-display-card {
+    background: #1a1a1a; /* Gris très foncé pour les cartes */
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.cv-page-body .cv-display-card h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cv-page-body .cv-img-box {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid #444;
+}
+
+.cv-page-body .cv-img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ton bouton VIOLET d'origine */
+.cv-page-body .cv-dl-button {
+    background-color: #6200ea !important; /* Ton violet exact */
+    color: white !important;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 90%;
+    text-align: center;
+    display: block;
+}
+
+.cv-page-body .cv-dl-button:hover {
+    background-color: #7c4dff !important; /* Violet plus clair au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(98, 0, 234, 0.4);
+}
+
+/* Correction Mobile pour éviter le chevauchement */
+@media (max-width: 768px) {
+    .cv-page-body .cv-main-title {
+        font-size: 1.8rem !important;
+        margin-top: 20px;
+    }
+    .cv-page-body .cv-cards-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .cv-page-body .cv-display-card {
+        width: 95%;
+        max-width: none;
+    }
+}

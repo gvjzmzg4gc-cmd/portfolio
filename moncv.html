@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CV - Arthur WILLEMENOT</title>
+</head>
+<body class="cv-page-body">
+    <header>
+        <div class="logo">ARTHUR WILLEMENOT</div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="Index.html#mes-projets">Projets</a></li>
+                <li><a href="moncv.html" class="active">Mon CV</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switcher">
+            <button onclick="changeLang('fr')" class="lang-btn"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+            <button onclick="changeLang('en')" class="lang-btn"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+    </header>
+
+    <main class="cv-section-container">
+        <h1 class="cv-main-title" data-key="cv_title">Mon Curriculum Vitae</h1>
+        
+        <div class="cv-cards-grid">
+            <div class="cv-display-card">
+                <h2 data-key="cv_fr_label">Version Française</h2>
+                <div class="cv-img-box">
+                    <img src="fichiers/CV 1TSCOM A - ARTHUR WILLEMENOT FR.png" alt="CV FR">
+                </div>
+                <a href="fichiers/CV 1TSCOM A - ARTHUR WILLEMENOT FR.pdf" download class="cv-dl-button">
+                    <span data-key="cv_dl_fr">TÉLÉCHARGER (FR)</span>
+                </a>
+            </div>
+
+            <div class="cv-display-card">
+                <h2 data-key="cv_en_label">English Version</h2>
+                <div class="cv-img-box">
+                    <img src="fichiers/CV 1TSCOM A - ARTHUR WILLEMENOT EN.png" alt="CV EN">
+                </div>
+                <a href="fichiers/CV 1TSCOM A - ARTHUR WILLEMENOT EN.pdf" download class="cv-dl-button">
+                    <span data-key="cv_dl_en">DOWNLOAD (EN)</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script>
+        async function updateContent(lang) {
+            try {
+                const response = await fetch('lang.json');
+                const data = await response.json();
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (data[lang] && data[lang][key]) el.innerHTML = data[lang][key];
+                });
+                document.documentElement.lang = lang;
+            } catch (err) { console.error(err); }
+        }
+        function changeLang(lang) {
+            localStorage.setItem('preferredLang', lang);
+            updateContent(lang);
+        }
+        window.onload = () => {
+            let savedLang = localStorage.getItem('preferredLang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+            updateContent(savedLang);
+        };
+    </script>
+
+    <footer>
+        <p>© 2026 ARTHUR WILLEMENOT</p>
+    </footer>
+
+</body>
+</html>

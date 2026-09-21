@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Le Jardin de Guy Piret - Arthur WILLEMENOT</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ARTHUR WILLEMENOT</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+                <li><a href="index.html#mes-projets" data-key="nav_projects">Projets</a></li>
+                <li><a href="moncv.html" data-key="nav_cv">Mon CV</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switcher">
+            <button onclick="changeLang('fr')" class="lang-btn">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français">
+            </button>
+            <button onclick="changeLang('en')" class="lang-btn">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English">
+            </button>
+        </div>
+    </header>
+
+    <section class="project-hero guypiret-hero">
+        <h1 data-key="guy_page_title">Le Jardin de Guy Piret</h1>
+        <div class="project-meta" data-key="guy_meta">CMS • Design</div>
+    </section>
+
+    <section class="project-content">
+        <div class="content-grid">
+            <div class="text-block">
+                <h2 data-key="guy_sec1_title">Créer un site web sur mesure</h2>
+                <p data-key="guy_sec1_desc">Guy Piret communiquait uniquement via sa page Facebook lorsqu'il m'a fait part de son idée d'un site internet "style blog", sur lequel il pourrait poster ses propres articles.</p>
+            </div>
+            <div class="image-block">
+                <img src="Images/guypiretjardin.jpg" alt="Aperçu du jardin de Guy">
+            </div>
+        </div>
+
+        <div class="content-grid reverse">
+            <div class="text-block">
+                <h2 data-key="guy_sec2_title">Le choix du CMS</h2>
+                <p data-key="guy_sec2_p1">Étant donné la demande particulière de Guy Piret, le choix de la plateforme de développement du site était restreint. J'ai finalement choisi WordPress pour sa simplicité d'utilisation vis-à-vis des outils de création d'articles.</p>
+                <p class="project-conclusion" data-key="guy_sec2_conc">Ci-dessous la page concernant les articles écrits par Guy Piret.</p>
+            </div>
+            <div class="image-block">
+                <img src="Images/ljdgparticles.png" alt="La page des articles">
+            </div>
+        </div>
+        
+        <section class="project-bilan">
+            <h2 data-key="guy_bilan_title">Bilan</h2>
+            <p data-key="guy_bilan_desc">Ce projet, toujours d'actualité puisque j'en assure la maintenance, m'a permis d'améliorer considérablement ma capacité à <span class="highlight">comprendre et à échanger sur les attentes</span> d'un client. Les imprévus rencontrés m'ont également rappelé qu'une <span class="highlight">organisation rigoureuse est essentielle</span> au bon déroulement d'un projet de cette envergure.</p>
+        </section>
+    </section>
+
+    <footer>
+        <p>© 2026 ARTHUR WILLEMENOT</p>
+    </footer>
+
+    <script>
+        async function updateContent(lang) {
+            try {
+                const response = await fetch('lang.json');
+                const data = await response.json();
+                
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (data[lang] && data[lang][key]) {
+                        el.innerHTML = data[lang][key];
+                    }
+                });
+
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('onclick').includes(lang)) {
+                        btn.classList.add('active');
+                    }
+                });
+            } catch (err) {
+                console.error("Erreur de chargement des langues :", err);
+            }
+        }
+
+        function changeLang(lang) {
+            localStorage.setItem('preferredLang', lang);
+            updateContent(lang);
+        }
+
+        window.onload = () => {
+            let savedLang = localStorage.getItem('preferredLang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+            updateContent(savedLang);
+        };
+    </script>
+</body>
+</html>
