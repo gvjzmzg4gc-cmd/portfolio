@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Arthur Willemenot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ARTHUR<span>.</span>WILLEMENOT</a>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html#mes-projets" data-key="nav_projects">Projets</a></li>
+            <li><a href="cv.html" data-key="nav_cv" class="is-active">Mon CV</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+          <button class="lang-btn" data-lang="en" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+
+  <section class="cv-hero">
+    <div class="container">
+      <h1 data-key="cv_title">Mon Curriculum Vitae</h1>
+    </div>
+  </section>
+
+  <section class="cv-cards">
+    <div class="cv-card">
+      <h2 data-key="cv_fr_label">Version française</h2>
+      <div class="cv-preview">
+        <img src="assets/img/cv/cv-fr.png" alt="Aperçu du CV en français">
+      </div>
+      <a href="assets/docs/cv-fr.pdf" download class="btn btn-primary">
+        <span data-key="cv_dl_fr">Télécharger (FR)</span>
+      </a>
+    </div>
+
+    <div class="cv-card">
+      <h2 data-key="cv_en_label">English version</h2>
+      <div class="cv-preview">
+        <img src="assets/img/cv/cv-en.png" alt="CV preview in English">
+      </div>
+      <a href="assets/docs/cv-en.pdf" download class="btn btn-primary">
+        <span data-key="cv_dl_en">Download (EN)</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Arthur Willemenot</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

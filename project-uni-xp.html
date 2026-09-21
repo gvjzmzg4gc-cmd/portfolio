@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNI-XP — Arthur Willemenot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ARTHUR<span>.</span>WILLEMENOT</a>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html#mes-projets" data-key="nav_projects" class="is-active">Projets</a></li>
+            <li><a href="cv.html" data-key="nav_cv">Mon CV</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+          <button class="lang-btn" data-lang="en" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+
+  <section class="project-hero">
+    <div class="project-hero-bg" style="background-image:url('assets/img/unixp/overlay-live.webp');"></div>
+    <div class="container">
+      <a href="index.html#mes-projets" class="back-link" data-key="back_to_projects">← Tous les projets</a>
+      <h1 data-key="unixp_page_title">UNI-XP</h1>
+      <div class="project-meta">
+        <span data-key="tag_social">Réseaux sociaux</span>
+        <span data-key="tag_strategy">Stratégie</span>
+        <span data-key="tag_events">Événementiel</span>
+        <span data-key="tag_internship">Stage</span>
+      </div>
+      <p class="detail-conclusion" style="margin-top:16px;border-top:none;padding-top:0;" data-key="unixp_period">Stage du 15 mai au 10 juillet 2026 — BTS Communication, 1ère année</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+
+      <div class="doc-card">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <div class="doc-title" data-key="doc_report_title">Rapport de stage complet</div>
+          <div class="doc-sub" data-key="doc_report_sub">PDF · à consulter ou télécharger</div>
+        </div>
+        <a href="assets/docs/rapport-stage-unixp.pdf" target="_blank" class="btn btn-ghost">
+          <span data-key="unixp_download_btn">Consulter le rapport de stage</span>
+        </a>
+      </div>
+
+      <!-- Section 1 : contexte -->
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">01 — Contexte</span>
+          <h2 data-key="unixp_sec1_title">La première arène gaming &amp; esport de Brest</h2>
+          <p data-key="unixp_sec1_desc">UNI-XP est un lieu innovant, unique et immersif dédié au jeu vidéo, inauguré en décembre 2025 à Brest. L'établissement combine zones LAN, simulateurs de course (Sim Racing) et un cinéma privatif (salle V.I.P), pour une expérience collective et mémorable accessible aux joueurs passionnés comme au grand public.<br><br>Ma mission, en tant que stagiaire communication : <span class="highlight">accompagner le lancement de l'activité</span> par une communication digitale ambitieuse, en phase de post-ouverture.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/unixp/story-ouverture.webp" alt="UNI-XP : salle de cinéma gaming et poste PC">
+        </div>
+      </div>
+
+      <!-- Section 2 : brief -->
+      <div class="detail-grid reverse">
+        <div class="detail-text">
+          <span class="kicker">02 — Le brief</span>
+          <h2 data-key="unixp_sec2_title">Dynamiser la présence numérique</h2>
+          <p data-key="unixp_sec2_p1">UNI-XP fait face à un marché du gaming en pleine expansion (40 millions de pratiquants en France) mais à une notoriété encore limitée à l'échelle de l'agglomération brestoise, malgré un ancrage local solide dans les réseaux d'affaires (BNI, Biz'h).</p>
+          <p data-key="unixp_sec2_p2">L'objectif : <span class="highlight">accroître la visibilité</span>, générer du trafic physique en salle, et structurer une communauté active en ligne comme hors ligne pour pérenniser le modèle économique de cette niche de marché.</p>
+          <p class="detail-conclusion" data-key="unixp_sec2_conc">Analyse concurrentielle, benchmark et matrice SWOT ont posé les bases de la stratégie avant toute création.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/unixp/miro-board.webp" alt="Veille et brainstorming sur Miro">
+        </div>
+      </div>
+
+      <!-- Section 3 : overlay stream -->
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">03 — Identité de diffusion</span>
+          <h2 data-key="unixp_sec3_title">Une identité visuelle pour le streaming</h2>
+          <p data-key="unixp_sec3_p1">Pour donner à UNI-XP une image professionnelle sur Twitch, j'ai conçu de A à Z l'<span class="highlight">overlay de diffusion en direct</span> des tournois, sur Affinity Designer puis Adobe Illustrator : règles du jeu, partenaires et agenda des évènements intégrés à l'habillage.</p>
+          <p data-key="unixp_sec3_p2">Le même travail graphique a servi à la création d'affiches de communication (Sim Racing, salle V.I.P) et de supports d'affichage pour le lieu.</p>
+          <p class="detail-conclusion" data-key="unixp_sec3_conc">De la première maquette à son intégration en direct pendant un tournoi Minecraft — cliquez pour comparer.</p>
+        </div>
+        <div class="detail-media">
+          <div class="media-frame tight">
+            <div class="carousel">
+              <button class="carousel-arrow prev" aria-label="Précédent">‹</button>
+              <button class="carousel-arrow next" aria-label="Suivant">›</button>
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <span class="carousel-badge">Logiciel</span>
+                  <img src="assets/img/unixp/overlay-software.webp" alt="Overlay en cours de création sur Affinity">
+                </div>
+                <div class="carousel-slide">
+                  <span class="carousel-badge">Résultat live</span>
+                  <img src="assets/img/unixp/overlay-live.webp" alt="Overlay intégré pendant le live Twitch">
+                </div>
+              </div>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-2" style="margin-top:-30px;">
+        <div>
+          <img src="assets/img/unixp/affiche-simrace.webp" alt="Affiche B-Klub Sim Racing">
+        </div>
+        <div>
+          <img src="assets/img/unixp/affiche-vip.webp" alt="Affiche B-Klub salle V.I.P.">
+        </div>
+      </div>
+      <p class="gallery-caption" style="margin-bottom:70px;">Affiches B-Klub déclinées du même univers graphique — Sim Racing et salle V.I.P.</p>
+
+      <!-- Section 4 : calendrier editorial -->
+      <div class="detail-grid reverse">
+        <div class="detail-text">
+          <span class="kicker">04 — Stratégie de contenu</span>
+          <h2 data-key="unixp_sec4_title">Un calendrier éditorial pensé pour durer</h2>
+          <p data-key="unixp_sec4_desc">Avec la responsable de communication, j'ai structuré un <span class="highlight">calendrier éditorial</span> sur deux mois : brainstorming et mindmaps sur Miro, planification des publications Instagram/TikTok, tournage et montage de contenus courts (Reels) pour annoncer les évènements et animer le quotidien du lieu.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/unixp/calendrier-editorial.webp" alt="Calendrier éditorial UNI-XP">
+        </div>
+      </div>
+
+      <!-- Section 5 : evenement -->
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">05 — Évènement phare</span>
+          <h2 data-key="unixp_sec5_title">FallenXP : le lancement d'un évènement esport</h2>
+          <p data-key="unixp_sec5_desc">Le projet phare de mon stage : la création d'un tournoi Minecraft grand public, <span class="highlight">FallenXP</span>, pensé pour toucher à la fois le public sur place et une audience à distance en streaming. J'ai produit l'overlay du live, participé à la promotion sur les réseaux et diffusé les temps forts sur TikTok et Instagram.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/unixp/video-reseaux.webp" alt="Vidéo réseaux sociaux annonçant FallenXP">
+        </div>
+      </div>
+
+      <!-- Section 6 : resultats -->
+      <div class="detail-grid reverse">
+        <div class="detail-text">
+          <span class="kicker">06 — Résultats</span>
+          <h2 data-key="unixp_sec6_title">Des résultats mesurés et exploités</h2>
+          <p data-key="unixp_sec6_desc">Le suivi des statistiques Instagram (vues, taux d'ouverture, clics) m'a permis d'ajuster le calendrier éditorial en continu. Les retours qualitatifs, collectés directement sur Discord, ont confirmé la perception d'UNI-XP comme un <span class="highlight">acteur esport crédible</span>, technique et proche de sa communauté.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/unixp/insights-stats.webp" alt="Statistiques Instagram Insights">
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-tile">
+          <div class="stat-value" data-key="unixp_stat1_value">94 404</div>
+          <div class="stat-label" data-key="unixp_stat1_label">vues cumulées sur les publications Instagram</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-value" data-key="unixp_stat2_value">+18 %</div>
+          <div class="stat-label" data-key="unixp_stat2_label">de taux d'engagement moyen après passage aux Reels</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-value" data-key="unixp_stat3_value">80 %</div>
+          <div class="stat-label" data-key="unixp_stat3_label">de taux de remplissage des PC pendant le tournoi FallenXP</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-value" data-key="unixp_stat4_value">+61</div>
+          <div class="stat-label" data-key="unixp_stat4_label">nouveaux abonnés sur la période du stage</div>
+        </div>
+      </div>
+
+      <section class="bilan">
+        <h2 data-key="unixp_bilan_title">Bilan</h2>
+        <p data-key="unixp_bilan_desc">Ce stage m'a permis de mobiliser l'ensemble des compétences du bloc communication : veille concurrentielle, réflexion stratégique autour du positionnement de marque, brainstorming créatif, conception graphique, et gestion de projet dans le respect de contraintes techniques et temporelles. Les échanges réguliers avec l'annonceur ont aussi renforcé ma <span class="highlight">capacité à présenter et argumenter</span> des choix de communication de manière professionnelle — évaluée « très bien » sur l'ensemble des critères par mon tuteur d'entreprise.</p>
+      </section>
+
+      <nav class="project-pager">
+        <a href="project-guy-piret.html" class="pager-link prev">
+          <span class="pager-dir" data-key="pager_prev">Projet précédent</span>
+          <span class="pager-title" data-key="guy_page_title">Le Jardin de Guy Piret</span>
+        </a>
+        <a href="project-villas-majolie.html" class="pager-link next">
+          <span class="pager-dir" data-key="pager_next">Projet suivant</span>
+          <span class="pager-title" data-key="villas_page_title">Les Villas Majolie</span>
+        </a>
+      </nav>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Arthur Willemenot</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

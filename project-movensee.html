@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move'N See — Arthur Willemenot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ARTHUR<span>.</span>WILLEMENOT</a>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html#mes-projets" data-key="nav_projects" class="is-active">Projets</a></li>
+            <li><a href="cv.html" data-key="nav_cv">Mon CV</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+          <button class="lang-btn" data-lang="en" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+
+  <section class="project-hero">
+    <div class="project-hero-bg" style="background-image:url('assets/img/movensee/movensee-batiment.png');"></div>
+    <div class="container">
+      <a href="index.html#mes-projets" class="back-link" data-key="back_to_projects">← Tous les projets</a>
+      <h1 data-key="move_page_title">Move'N See</h1>
+      <div class="project-meta">
+        <span data-key="tag_texturing">Texturing</span>
+        <span data-key="tag_3drenders">Rendus 3D</span>
+        <span data-key="tag_internship">Stage</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+
+      <div class="doc-card">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <div class="doc-title" data-key="doc_report_title">Rapport de stage complet</div>
+          <div class="doc-sub" data-key="doc_report_sub">PDF · à consulter ou télécharger</div>
+        </div>
+        <a href="assets/docs/rapport-stage-movensee.pdf" target="_blank" class="btn btn-ghost">
+          <span data-key="move_download_btn">Consulter le rapport de stage</span>
+        </a>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">01</span>
+          <h2 data-key="move_sec1_title">Les robots caméramans brestois</h2>
+          <p data-key="move_sec1_desc">Basée à Brest, MOVE'N SEE conçoit et fabrique des robots caméramans intelligents capables de <span class="highlight">filmer automatiquement</span> des sujets en mouvement, sans intervention humaine.<br><br>J'ai eu l'opportunité d'y effectuer mon stage lors de ma première année d'études 3D à La Digital School. J'y ai principalement utilisé <span class="highlight">le logiciel Blender</span>.</p>
+        </div>
+        <div class="detail-media">
+          <img src="assets/img/movensee/movensee-batiment.png" alt="Bâtiment Move'N See">
+        </div>
+      </div>
+
+      <div class="detail-grid reverse">
+        <div class="detail-media">
+          <div class="media-frame tight">
+            <div class="carousel">
+              <button class="carousel-arrow prev" aria-label="Précédent">‹</button>
+              <button class="carousel-arrow next" aria-label="Suivant">›</button>
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <span class="carousel-badge" data-key="move_badge_before">Avant</span>
+                  <img src="assets/img/movensee/pix4team-avant.png" alt="Avant retexturisation">
+                </div>
+                <div class="carousel-slide">
+                  <span class="carousel-badge" data-key="move_badge_after">Après</span>
+                  <img src="assets/img/movensee/pix4team-apres.png" alt="Après retexturisation">
+                </div>
+                <div class="carousel-slide">
+                  <span class="carousel-badge" data-key="move_badge_result">Résultat</span>
+                  <img src="assets/img/movensee/pix4team-resultat.png" alt="Rendu final">
+                </div>
+              </div>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-text">
+          <span class="kicker">02</span>
+          <h2 data-key="move_sec2_title">Mission 1 — Amélioration du modèle</h2>
+          <p data-key="move_sec2_p1">Pour ma première mission, j'ai été chargé de refaire entièrement <span class="highlight">les textures et l'éclairage studio</span> du modèle 3D du robot Pix4Team 2, ainsi que de compléter le modèle.</p>
+          <p data-key="move_sec2_p2">Les textures précédentes donnaient un aspect trop « 3D » et artificiel, ce qui était très visible sur les rendus finaux.</p>
+          <p class="detail-conclusion" data-key="move_sec2_conc">Utilisez les flèches sur l'image pour comparer le résultat.</p>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">03</span>
+          <h2 data-key="move_sec3_title">Mission 2 — Réalisation d'une animation</h2>
+          <p data-key="move_sec3_desc">Ma seconde mission consistait en la réalisation d'une <span class="highlight">animation originale</span> mettant en lumière la technicité du robot, afin d'illustrer la précision de l'électronique embarquée sur un modèle Pix4Team. J'ai utilisé l'ancien modèle 3D pour cette mission, le réalisme n'étant pas un critère de réussite ici.</p>
+        </div>
+        <div class="detail-media">
+          <video poster="assets/img/movensee/pix4team-animation-poster.jpg" autoplay loop muted playsinline class="project-video">
+            <source src="assets/video/movensee/pix4team-animation.webm" type="video/webm">
+            <source src="assets/video/movensee/pix4team-animation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <section class="bilan">
+        <h2 data-key="move_bilan_title">Bilan</h2>
+        <p data-key="move_bilan_desc">Ce projet m'a permis de <span class="highlight">perfectionner mes compétences</span> avec le logiciel Blender, que j'utilisais très peu auparavant. En plus de m'avoir permis de passer de 3DS Max à Blender, ce stage m'a également permis de travailler sous une hiérarchie et de bénéficier des conseils des autres membres de l'entreprise.</p>
+      </section>
+
+      <nav class="project-pager">
+        <a href="project-villas-majolie.html" class="pager-link prev">
+          <span class="pager-dir" data-key="pager_prev">Projet précédent</span>
+          <span class="pager-title" data-key="villas_page_title">Les Villas Majolie</span>
+        </a>
+        <a href="project-moea.html" class="pager-link next">
+          <span class="pager-dir" data-key="pager_next">Projet suivant</span>
+          <span class="pager-title" data-key="moea_page_title">MOEA</span>
+        </a>
+      </nav>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Arthur Willemenot</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOEA — Arthur Willemenot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ARTHUR<span>.</span>WILLEMENOT</a>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html#mes-projets" data-key="nav_projects" class="is-active">Projets</a></li>
+            <li><a href="cv.html" data-key="nav_cv">Mon CV</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+          <button class="lang-btn" data-lang="en" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+
+  <section class="project-hero">
+    <div class="project-hero-bg" style="background-image:url('assets/img/moea/moea-shoe.jpg');"></div>
+    <div class="container">
+      <a href="index.html#mes-projets" class="back-link" data-key="back_to_projects">← Tous les projets</a>
+      <h1 data-key="moea_page_title">MOEA — BTS Blanc 2</h1>
+      <div class="project-meta">
+        <span data-key="tag_logo">Logo</span>
+        <span data-key="tag_design">Design</span>
+        <span data-key="tag_school">Scolaire</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+
+      <div class="detail-grid">
+        <div class="detail-text">
+          <span class="kicker">01</span>
+          <h2 data-key="moea_sec1_title">Exercice de création d'un logo</h2>
+          <p data-key="moea_sec1_p1">Dans le cadre de la partie pratique du second BTS Blanc de première année, nous avons eu pour exercice de réaliser un logo pour une marque fictive, MOEA.</p>
+          <p data-key="moea_sec1_p2">Il s'agit d'une marque de chaussures fabriquées à partir de déchets alimentaires recyclés. Il était fortement conseillé d'utiliser des éléments rappelant les fruits.</p>
+        </div>
+        <div class="detail-media">
+          <div class="media-frame">
+            <img src="assets/img/moea/moea-logo.png" alt="Logo MOEA">
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-grid reverse">
+        <div class="detail-text">
+          <span class="kicker">02</span>
+          <h2 data-key="moea_sec2_title">Justification des choix</h2>
+          <p data-key="moea_sec2_p1">La réalisation de ce logo s'est déroulée entièrement sur Adobe Illustrator. Le dossier joint détaille les étapes de construction et les choix colorimétriques effectués.</p>
+          <p data-key="moea_sec2_p2">Le contour noir appliqué à l'ensemble des éléments facilite son application sur tous les supports de communication.</p>
+          <p class="detail-conclusion" data-key="moea_sec2_conc">La police d'écriture a été choisie pour son aspect minimaliste, bien que le bilan souligne des axes d'amélioration.</p>
+        </div>
+        <div class="detail-media">
+          <div class="doc-card" style="margin-bottom:16px;">
+            <div class="doc-icon">📄</div>
+            <div class="doc-info">
+              <div class="doc-title" data-key="doc_moea_title">Dossier de justification</div>
+              <div class="doc-sub" data-key="doc_moea_sub">PDF · choix graphiques et colorimétriques</div>
+            </div>
+          </div>
+          <div class="pdf-embed">
+            <iframe src="assets/docs/justificatif-logo-moea.pdf" title="Justification du logo MOEA"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <section class="bilan">
+        <h2 data-key="moea_bilan_title">Bilan de l'exercice</h2>
+        <p data-key="moea_bilan_desc">Cet exercice m'a permis de travailler sur une identité visuelle éco-responsable et ludique ; je n'ai cependant pas assez reflété la modernité dans le choix de la typographie.</p>
+      </section>
+
+      <nav class="project-pager">
+        <a href="project-movensee.html" class="pager-link prev">
+          <span class="pager-dir" data-key="pager_prev">Projet précédent</span>
+          <span class="pager-title" data-key="move_page_title">Move'N See</span>
+        </a>
+        <a href="project-guy-piret.html" class="pager-link next">
+          <span class="pager-dir" data-key="pager_next">Projet suivant</span>
+          <span class="pager-title" data-key="guy_page_title">Le Jardin de Guy Piret</span>
+        </a>
+      </nav>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Arthur Willemenot</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
