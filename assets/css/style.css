@@ -979,3 +979,134 @@ p { color: var(--text-muted); }
 }
 
 .cv-card .btn { width: 100%; justify-content: center; }
+
+/* ==========================================================================
+   Parcours (timeline)
+   ========================================================================== */
+
+.parcours-hero {
+  padding: calc(var(--header-h) + 50px) 0 20px;
+  max-width: 700px;
+}
+
+.parcours-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.parcours-hero p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.timeline {
+  position: relative;
+  max-width: 760px;
+  padding: 60px 0 40px 36px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 44px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  z-index: 2;
+}
+
+.timeline-item.is-highlight .timeline-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.timeline-item.is-now .timeline-dot {
+  background: var(--bg);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.timeline-date {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.timeline-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+}
+
+.timeline-item.is-highlight .timeline-card { border-color: var(--accent-border); }
+
+.timeline-card h3 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.timeline-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.timeline-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.timeline-project-link::after { content: '→'; transition: transform 0.25s var(--ease); }
+.timeline-project-link:hover::after { transform: translateX(4px); }
+
+.parcours-cta {
+  max-width: 760px;
+  margin: 20px 0 90px 36px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.parcours-cta h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.parcours-cta p { font-size: 0.9rem; color: var(--text-muted); max-width: 420px; }
+
+@media (max-width: 640px) {
+  .timeline { padding-left: 28px; }
+  .timeline-dot { left: -28px; }
+  .parcours-cta { margin-left: 0; }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Parcours — Arthur Willemenot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ARTHUR<span>.</span>WILLEMENOT</a>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html#mes-projets" data-key="nav_projects">Projets</a></li>
+            <li><a href="parcours.html" data-key="nav_parcours" class="is-active">Mon Parcours</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+          <button class="lang-btn" data-lang="en" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim"></div>
+
+  <section class="container">
+    <div class="parcours-hero">
+      <h1 data-key="parcours_page_title">Mon Parcours</h1>
+      <p data-key="parcours_intro">Du bac général à mon deuxième stage en communication, en passant par un bachelor en 3D — voici le chemin parcouru jusqu'ici.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step1_date">2023</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step1_title">Baccalauréat Général</h3>
+          <p data-key="parcours_step1_desc">Spécialités Mathématiques et Physique-Chimie — Lycée Javouhey, Brest Rive Droite.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step2_date">2023 — 2024</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step2_title">1ère année · Bachelor Animation 3D</h3>
+          <p data-key="parcours_step2_desc">Cursus Open Campus à La Digital School (Brest) : tronc commun marketing &amp; communication, et premiers pas en 3D.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step3_date">Juillet — Août 2024</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step3_title">Job d'été · Les Chanceux</h3>
+          <p data-key="parcours_step3_desc">Employé polyvalent en restauration rapide à Brest, pendant les vacances entre les deux années de bachelor.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step4_date">2024 — 2025</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step4_title">2ème année · Bachelor Animation 3D</h3>
+          <p data-key="parcours_step4_desc">Spécialisation <span class="highlight">3D Motion Design</span> à La Digital School. Cette année se conclut par un stage.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item is-highlight">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step5_date">2025</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step5_title">Stage · Move'N See</h3>
+          <p data-key="parcours_step5_desc">Production de rendus 3D et d'une animation pour les robots caméramans Pix4Team, sous Blender.</p>
+          <a href="project-movensee.html" class="timeline-project-link"><span data-key="parcours_view_project">Voir le projet</span></a>
+        </div>
+      </div>
+
+      <div class="timeline-item is-highlight">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step6_date">Été 2025</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step6_title">Le Jardin de Guy Piret</h3>
+          <p data-key="parcours_step6_desc">Début, en parallèle, de la création et de la maintenance bénévole du site web de Guy Piret — un projet toujours actif aujourd'hui.</p>
+          <a href="project-guy-piret.html" class="timeline-project-link"><span data-key="parcours_view_project">Voir le projet</span></a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step7_date">Depuis septembre 2025</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step7_title">1ère année · BTS Communication</h3>
+          <p data-key="parcours_step7_desc">Entrée au Sup' Javouhey (Brest), avec deux projets marquants : <a href="project-villas-majolie.html" class="highlight">Les Villas Majolie</a> (logo &amp; charte graphique) et <a href="project-moea.html" class="highlight">MOEA</a> (création de logo). Au programme aussi : outils créatifs, stratégie de communication et gestion de réseaux sociaux. L'année se conclut par un stage.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item is-highlight">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step8_date">Mai — Juillet 2026</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step8_title">Stage · UNI-XP</h3>
+          <p data-key="parcours_step8_desc">Communication digitale et événementielle pour la première arène gaming &amp; esport de Brest : stratégie de contenu, identité de diffusion, lancement d'un tournoi.</p>
+          <a href="project-uni-xp.html" class="timeline-project-link"><span data-key="parcours_view_project">Voir le projet</span></a>
+        </div>
+      </div>
+
+      <div class="timeline-item is-now">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date" data-key="parcours_step9_date">Depuis septembre 2026</div>
+        <div class="timeline-card">
+          <h3 data-key="parcours_step9_title">2ème année · BTS Communication</h3>
+          <p data-key="parcours_step9_desc">Actuellement au Sup' Javouhey, à la recherche d'un nouveau stage ou d'une alternance en communication.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="parcours-cta">
+      <div>
+        <h3 data-key="parcours_cta_title">Envie d'en savoir plus ?</h3>
+        <p data-key="parcours_cta_desc">Mon CV détaille ces expériences en une page — à télécharger en français ou en anglais.</p>
+      </div>
+      <a href="cv.html" class="btn btn-primary"><span data-key="parcours_cta_btn">Voir mon CV</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Arthur Willemenot</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

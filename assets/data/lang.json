@@ -2,7 +2,7 @@
   "fr": {
     "nav_home": "Accueil",
     "nav_projects": "Projets",
-    "nav_cv": "Mon CV",
+    "nav_parcours": "Mon Parcours",
 
     "hero_tagline": "BTS Communication · Brest",
     "hero_title_1": "Arthur",
@@ -110,7 +110,7 @@
     "move_meta": "Texturing • Rendus 3D • Stage",
     "move_download_btn": "Consulter le rapport de stage",
     "move_sec1_title": "Les robots caméramans brestois",
-    "move_sec1_desc": "Basée à Brest, MOVE'N SEE conçoit et fabrique des robots caméramans intelligents capables de <span class='highlight'>filmer automatiquement</span> des sujets en mouvement, sans intervention humaine.<br><br>J'ai eu l'opportunité d'y effectuer mon stage lors de ma première année d'études 3D à La Digital School. J'y ai principalement utilisé <span class='highlight'>le logiciel Blender</span>.",
+    "move_sec1_desc": "Basée à Brest, MOVE'N SEE conçoit et fabrique des robots caméramans intelligents capables de <span class='highlight'>filmer automatiquement</span> des sujets en mouvement, sans intervention humaine.<br><br>J'ai eu l'opportunité d'y effectuer mon stage à la fin de ma seconde année de Bachelor Animation 3D à La Digital School, en spécialisation 3D Motion Design. J'y ai principalement utilisé <span class='highlight'>le logiciel Blender</span>.",
     "move_badge_before": "Avant",
     "move_badge_after": "Après",
     "move_badge_result": "Résultat",
@@ -170,13 +170,60 @@
     "unixp_sec6_desc": "Le suivi des statistiques Instagram (vues, taux d'ouverture, clics) m'a permis d'ajuster le calendrier éditorial en continu. Les retours qualitatifs, collectés directement sur Discord, ont confirmé la perception d'UNI-XP comme un <span class='highlight'>acteur esport crédible</span>, technique et proche de sa communauté.",
 
     "unixp_bilan_title": "Bilan",
-    "unixp_bilan_desc": "Ce stage m'a permis de mobiliser l'ensemble des compétences du bloc communication : veille concurrentielle, réflexion stratégique autour du positionnement de marque, brainstorming créatif, conception graphique, et gestion de projet dans le respect de contraintes techniques et temporelles. Les échanges réguliers avec l'annonceur ont aussi renforcé ma <span class='highlight'>capacité à présenter et argumenter</span> des choix de communication de manière professionnelle — évaluée « très bien » sur l'ensemble des critères par mon tuteur d'entreprise."
+    "unixp_bilan_desc": "Ce stage m'a permis de mobiliser l'ensemble des compétences du bloc communication : veille concurrentielle, réflexion stratégique autour du positionnement de marque, brainstorming créatif, conception graphique, et gestion de projet dans le respect de contraintes techniques et temporelles. Les échanges réguliers avec l'annonceur ont aussi renforcé ma <span class='highlight'>capacité à présenter et argumenter</span> des choix de communication de manière professionnelle — évaluée « très bien » sur l'ensemble des critères par mon tuteur d'entreprise.",
+
+    "parcours_page_title": "Mon Parcours",
+    "parcours_intro": "Du bac général à mon deuxième stage en communication, en passant par un bachelor en 3D — voici le chemin parcouru jusqu'ici.",
+
+    "parcours_step1_date": "2023",
+    "parcours_step1_title": "Baccalauréat Général",
+    "parcours_step1_desc": "Spécialités Mathématiques et Physique-Chimie — Lycée Javouhey, Brest Rive Droite.",
+
+    "parcours_step2_date": "2023 — 2024",
+    "parcours_step2_title": "1ère année · Bachelor Animation 3D",
+    "parcours_step2_desc": "Cursus Open Campus à La Digital School (Brest) : tronc commun marketing &amp; communication, et premiers pas en 3D.",
+
+    "parcours_step3_date": "Juillet — Août 2024",
+    "parcours_step3_title": "Job d'été · Les Chanceux",
+    "parcours_step3_desc": "Employé polyvalent en restauration rapide à Brest, pendant les vacances entre les deux années de bachelor.",
+
+    "parcours_step4_date": "2024 — 2025",
+    "parcours_step4_title": "2ème année · Bachelor Animation 3D",
+    "parcours_step4_desc": "Spécialisation <span class='highlight'>3D Motion Design</span> à La Digital School. Cette année se conclut par un stage.",
+
+    "parcours_step5_date": "2025",
+    "parcours_step5_title": "Stage · Move'N See",
+    "parcours_step5_desc": "Production de rendus 3D et d'une animation pour les robots caméramans Pix4Team, sous Blender.",
+    "parcours_step5_link": "project-movensee.html",
+
+    "parcours_step6_date": "Été 2025",
+    "parcours_step6_title": "Le Jardin de Guy Piret",
+    "parcours_step6_desc": "Début, en parallèle, de la création et de la maintenance bénévole du site web de Guy Piret — un projet toujours actif aujourd'hui.",
+    "parcours_step6_link": "project-guy-piret.html",
+
+    "parcours_step7_date": "Depuis septembre 2025",
+    "parcours_step7_title": "1ère année · BTS Communication",
+    "parcours_step7_desc": "Entrée au Sup' Javouhey (Brest), avec deux projets marquants : <a href='project-villas-majolie.html' class='highlight'>Les Villas Majolie</a> (logo &amp; charte graphique) et <a href='project-moea.html' class='highlight'>MOEA</a> (création de logo). Au programme aussi : outils créatifs, stratégie de communication et gestion de réseaux sociaux. L'année se conclut par un stage.",
+
+    "parcours_step8_date": "Mai — Juillet 2026",
+    "parcours_step8_title": "Stage · UNI-XP",
+    "parcours_step8_desc": "Communication digitale et événementielle pour la première arène gaming &amp; esport de Brest : stratégie de contenu, identité de diffusion, lancement d'un tournoi.",
+    "parcours_step8_link": "project-uni-xp.html",
+
+    "parcours_step9_date": "Depuis septembre 2026",
+    "parcours_step9_title": "2ème année · BTS Communication",
+    "parcours_step9_desc": "Actuellement au Sup' Javouhey, à la recherche d'un nouveau stage ou d'une alternance en communication.",
+
+    "parcours_view_project": "Voir le projet",
+    "parcours_cta_title": "Envie d'en savoir plus ?",
+    "parcours_cta_desc": "Mon CV détaille ces expériences en une page — à télécharger en français ou en anglais.",
+    "parcours_cta_btn": "Voir mon CV"
   },
 
   "en": {
     "nav_home": "Home",
     "nav_projects": "Projects",
-    "nav_cv": "Resume",
+    "nav_parcours": "My Journey",
 
     "hero_tagline": "Communication Studies · Brest, France",
     "hero_title_1": "Arthur",
@@ -284,7 +331,7 @@
     "move_meta": "Texturing • 3D Rendering • Internship",
     "move_download_btn": "Read the internship report",
     "move_sec1_title": "Brest-based cameraman robots",
-    "move_sec1_desc": "Based in Brest, MOVE'N SEE designs and manufactures intelligent cameraman robots capable of <span class='highlight'>automatically filming</span> moving subjects, with no human intervention.<br><br>I had the opportunity to intern there during my first year of 3D studies at La Digital School, primarily using <span class='highlight'>Blender</span>.",
+    "move_sec1_desc": "Based in Brest, MOVE'N SEE designs and manufactures intelligent cameraman robots capable of <span class='highlight'>automatically filming</span> moving subjects, with no human intervention.<br><br>I had the opportunity to intern there at the end of my second year of the Bachelor in 3D Animation at La Digital School, specializing in 3D Motion Design, primarily using <span class='highlight'>Blender</span>.",
     "move_badge_before": "Before",
     "move_badge_after": "After",
     "move_badge_result": "Result",
@@ -344,6 +391,53 @@
     "unixp_sec6_desc": "Tracking Instagram statistics (views, open rate, clicks) let me continuously adjust the editorial calendar. Qualitative feedback, collected directly on Discord, confirmed that UNI-XP is perceived as a <span class='highlight'>credible esports player</span> — technical and close to its community.",
 
     "unixp_bilan_title": "Summary",
-    "unixp_bilan_desc": "This internship let me apply the full range of communication skills: competitive monitoring, strategic thinking around brand positioning, creative brainstorming, graphic design, and project management under technical and time constraints. Regular exchanges with the client also strengthened my <span class='highlight'>ability to present and argue</span> communication choices professionally — rated 'very good' across all criteria by my company supervisor."
+    "unixp_bilan_desc": "This internship let me apply the full range of communication skills: competitive monitoring, strategic thinking around brand positioning, creative brainstorming, graphic design, and project management under technical and time constraints. Regular exchanges with the client also strengthened my <span class='highlight'>ability to present and argue</span> communication choices professionally — rated 'very good' across all criteria by my company supervisor.",
+
+    "parcours_page_title": "My Journey",
+    "parcours_intro": "From a general baccalaureate to my second internship in communication, by way of a 3D bachelor's degree — here's the road so far.",
+
+    "parcours_step1_date": "2023",
+    "parcours_step1_title": "General Baccalaureate",
+    "parcours_step1_desc": "Mathematics and Physics-Chemistry specialties — Lycée Javouhey, Brest Rive Droite.",
+
+    "parcours_step2_date": "2023 — 2024",
+    "parcours_step2_title": "Year 1 · Bachelor in 3D Animation",
+    "parcours_step2_desc": "Open Campus program at La Digital School (Brest): shared marketing &amp; communication core curriculum, plus first steps in 3D.",
+
+    "parcours_step3_date": "July — August 2024",
+    "parcours_step3_title": "Summer job · Les Chanceux",
+    "parcours_step3_desc": "General staff member at a fast-food restaurant in Brest, during the break between both years of the bachelor's degree.",
+
+    "parcours_step4_date": "2024 — 2025",
+    "parcours_step4_title": "Year 2 · Bachelor in 3D Animation",
+    "parcours_step4_desc": "<span class='highlight'>3D Motion Design</span> specialization at La Digital School. The year wraps up with an internship.",
+
+    "parcours_step5_date": "2025",
+    "parcours_step5_title": "Internship · Move'N See",
+    "parcours_step5_desc": "Produced 3D renders and an animation for the Pix4Team cameraman robots, using Blender.",
+    "parcours_step5_link": "project-movensee.html",
+
+    "parcours_step6_date": "Summer 2025",
+    "parcours_step6_title": "Le Jardin de Guy Piret",
+    "parcours_step6_desc": "Started, in parallel, the volunteer creation and maintenance of Guy Piret's website — a project still active today.",
+    "parcours_step6_link": "project-guy-piret.html",
+
+    "parcours_step7_date": "Since September 2025",
+    "parcours_step7_title": "Year 1 · BTS Communication",
+    "parcours_step7_desc": "Joined Sup' Javouhey (Brest), with two standout projects: <a href='project-villas-majolie.html' class='highlight'>Les Villas Majolie</a> (logo &amp; brand guidelines) and <a href='project-moea.html' class='highlight'>MOEA</a> (logo design). Also on the program: creative tools, communication strategy and social media management. The year wraps up with an internship.",
+
+    "parcours_step8_date": "May — July 2026",
+    "parcours_step8_title": "Internship · UNI-XP",
+    "parcours_step8_desc": "Digital and event communication for Brest's first gaming &amp; esports arena: content strategy, broadcast identity, launch of a tournament.",
+    "parcours_step8_link": "project-uni-xp.html",
+
+    "parcours_step9_date": "Since September 2026",
+    "parcours_step9_title": "Year 2 · BTS Communication",
+    "parcours_step9_desc": "Currently at Sup' Javouhey, looking for a new internship or work-study placement in communication.",
+
+    "parcours_view_project": "View the project",
+    "parcours_cta_title": "Want to know more?",
+    "parcours_cta_desc": "My resume covers these experiences on a single page — available in French or English.",
+    "parcours_cta_btn": "View my resume"
   }
 }
