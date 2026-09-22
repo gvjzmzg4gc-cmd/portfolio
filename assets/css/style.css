@@ -489,7 +489,7 @@ p { color: var(--text-muted); }
 }
 
 @media (min-width: 700px) {
-  .skills-strip { grid-template-columns: repeat(4, 1fr); }
+  .skills-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 .skill-tile {
